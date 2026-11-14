@@ -1,0 +1,36 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code@2.1.325
+
+      - name: Validate marketplace
+        run: claude plugin validate --strict .
+
+      - name: Validate adr-consensus
+        run: |
+          claude plugin validate --strict plugins/adr-consensus
+          claude plugin validate --profile directory plugins/adr-consensus
+
+      - name: Validate replicants
+        run: |
+          claude plugin validate --strict plugins/replicants
+          claude plugin validate --profile directory plugins/replicants

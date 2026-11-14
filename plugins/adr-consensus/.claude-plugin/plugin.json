@@ -1,0 +1,18 @@
+{
+  "name": "adr-consensus",
+  "version": "0.1.0",
+  "description": "Drive ADRs to an implementation-readiness verdict with a configurable Anthropic-model review quorum",
+  "author": {
+    "name": "Rational Agents",
+    "url": "https://rational-agents.ai"
+  },
+  "homepage": "https://github.com/rational-agents-ai/rational_agents_plugins/tree/main/plugins/adr-consensus",
+  "repository": "https://github.com/rational-agents-ai/rational_agents_plugins",
+  "license": "MIT",
+  "keywords": [
+    "adr",
+    "architecture",
+    "design-review",
+    "consensus"
+  ]
+}

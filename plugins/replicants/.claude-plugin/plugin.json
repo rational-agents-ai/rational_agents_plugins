@@ -1,0 +1,18 @@
+{
+  "name": "replicants",
+  "version": "0.1.0",
+  "description": "Generic, cwd-bound engineering agents and skills for human-in-the-loop work",
+  "author": {
+    "name": "Rational Agents",
+    "url": "https://rational-agents.ai"
+  },
+  "homepage": "https://github.com/rational-agents-ai/rational_agents_plugins/tree/main/plugins/replicants",
+  "repository": "https://github.com/rational-agents-ai/rational_agents_plugins",
+  "license": "MIT",
+  "keywords": [
+    "agents",
+    "engineering",
+    "qa",
+    "human-in-the-loop"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "models": ["opus", "fable", "sonnet", "haiku"],
+  "seats": {
+    "reviewer_1": {
+      "label": "Reviewer 1",
+      "flag": "reviewer1",
+      "contract": "reviewer",
+      "agent": "adr-consensus:reviewer-grounded",
+      "default_model": "opus",
+      "required_tools": ["Read", "Glob", "Grep"],
+      "forbidden_tools": ["Edit", "Write", "NotebookEdit"]
+    },
+    "reviewer_2": {
+      "label": "Reviewer 2",
+      "flag": "reviewer2",
+      "contract": "reviewer",
+      "agent": "adr-consensus:reviewer-adversarial",
+      "default_model": "fable",
+      "required_tools": ["Read", "Glob", "Grep"],
+      "forbidden_tools": ["Edit", "Write", "NotebookEdit"]
+    },
+    "architect": {
+      "label": "Architect",
+      "flag": "architect",
+      "contract": "architect",
+      "agent": "adr-consensus:architect",
+      "default_model": "sonnet",
+      "required_tools": ["Read", "Edit"],
+      "forbidden_tools": []
+    },
+    "sweeper": {
+      "label": "Sweeper",
+      "flag": "sweeper",
+      "contract": "sweeper",
+      "agent": "adr-consensus:sweeper",
+      "default_model": "haiku",
+      "required_tools": ["Read", "Glob", "Grep", "Edit", "Bash"],
+      "forbidden_tools": []
+    }
+  },
+  "arbiter": {
+    "contract": "arbiter",
+    "agent": "general-purpose",
+    "model": null,
+    "required_tools": ["Read", "Write"],
+    "forbidden_tools": []
+  }
+}

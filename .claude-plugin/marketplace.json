@@ -1,0 +1,17 @@
+{
+  "name": "rational-agents",
+  "description": "Claude Code engineering tools from Rational Agents",
+  "owner": { "name": "Rational Agents" },
+  "plugins": [
+    {
+      "name": "adr-consensus",
+      "source": "./plugins/adr-consensus",
+      "description": "Drive ADRs to an implementation-readiness verdict with a configurable Anthropic-model review quorum"
+    },
+    {
+      "name": "replicants",
+      "source": "./plugins/replicants",
+      "description": "Generic, cwd-bound engineering agents and skills for human-in-the-loop work"
+    }
+  ]
+}
